@@ -41,10 +41,25 @@ console.log(imiona)
 
 
 const liczbyDo100 = new Array() 
-for(let i = 0;i < 100; i++) {
-    liczbyDo100.push(i + 1)
-    liczbyDo100.pop()
+for(let i = 100;i > 0; i--) {
+    liczbyDo100.push(i)
 }
-console.log(liczbyDo100)
+const liczbyDo = liczbyDo100.indexOf(45)
+console.log (liczbyDo100, liczbyDo)
+
+const liczbyDo10 = liczbyDo100.filter(item => {
+    if (item > 40 && item < 60) {
+        return item
+    }
+}) 
+console.log (liczbyDo10)
 
 
+const liczbyx3 = liczbyDo100.map(item => item * 3) 
+console.log(liczbyx3)
+
+const liczbyTak = liczbyDo100.every(item => item > 5)
+console.log (liczbyTak)
+
+const liczbyTak1 = liczbyDo100.some(item => item > 5)
+console.log (liczbyTak1)
